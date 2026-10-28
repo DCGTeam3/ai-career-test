@@ -81,9 +81,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.intro-copy button:fo
 .nr-project-tabs button{overflow-wrap:anywhere}
 @media(max-width:800px){.nr-project-top{grid-template-columns:minmax(0,1fr)}.nr-steps{grid-template-columns:minmax(0,1fr)}.nr-project-img{height:auto;min-height:0;max-height:none}.nr-project-tabs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
 @media(max-width:550px){.nr-project-tabs{grid-template-columns:minmax(0,1fr)}.nr-project-tabs button{min-height:48px}.nr-process-heading{font-size:18px}.nr-steps li{padding:16px 14px}}
+/* Assessment home on the left, campus destination on the right. */
+.header-inner,.header-inner[data-stage=start],.header-inner[data-stage=quiz]{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px}
+.header-inner[data-stage=result]{grid-template-columns:auto minmax(0,1fr) auto}
+.assessment-home{display:inline-flex;align-items:center;min-height:44px;width:fit-content;text-decoration:none;color:#292521;font-size:22px;font-weight:750;letter-spacing:-.6px}
+.campus-home-link{justify-self:end;width:158px;min-height:44px}
+.header-inner .section-nav{justify-self:center}
+@media(max-width:800px){.header-inner[data-stage=result]{grid-template-columns:minmax(0,1fr) auto}.header-inner[data-stage=result] .section-nav{grid-column:1 / -1;grid-row:2;justify-self:stretch;justify-content:center}.campus-home-link{grid-column:2;grid-row:1;width:140px}.assessment-home{grid-column:1;grid-row:1;font-size:20px}}
+@media(max-width:550px){.header-inner,.header-inner[data-stage=result]{display:grid!important;padding:12px 18px;gap:8px 14px}.campus-home-link{width:120px}.assessment-home{font-size:19px}.header-inner .section-nav{min-width:0;gap:4px}.header-inner .section-nav a{padding:12px 6px;font-size:12px;gap:5px}}
 /* Nine result characters: clip the contact sheet captions, retain live headings. */
 .nr-hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);align-items:center;gap:24px;padding:32px;background:#fff;min-height:300px;overflow:hidden}
 .nr-hero-copy{width:100%;padding:0;background:none;min-width:0}
-.nr-type-character{position:relative;width:100%;max-width:512px;aspect-ratio:512 / 300;overflow:hidden;justify-self:center;isolation:isolate}
+.nr-type-character{position:relative;width:100%;max-width:512px;aspect-ratio:512 / 288;overflow:hidden;justify-self:center;isolation:isolate}
 .nr-type-character .nr-type-sprite{position:absolute;display:block;width:300%;max-width:none;height:auto;margin:0;pointer-events:none}
 @media(max-width:800px){.nr-hero{grid-template-columns:1fr;padding:28px 22px;gap:24px;min-height:0;background:#fff}.nr-hero-copy{width:100%;padding:0;background:none}.nr-type-character{max-width:400px}}
