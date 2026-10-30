@@ -933,7 +933,7 @@ function projectDetail(p,scored,index){
  const others=[0,1,2,3,4,5].filter(f=>f!==primary);
  return `<div id="${c.id}-${p.id}" data-project-body="${c.id}:${p.id}" ${index?'hidden':''}>
  <div class="nr-project-top"><img class="nr-project-img" src="${AICareerEmbeddedImages[p.image]}" alt="${escape(p.output)} 예시" loading="lazy" width="1536" height="1024"><div class="nr-project-copy"><span class="nr-label">탐색용 프로젝트 예시</span><h3>${escape(p.title)}</h3><p>${escape(p.desc)}</p><div class="nr-output"><b>만들 결과물</b><span>${escape(p.output)}</span></div><div class="nr-start"><h4>${startTitle} <span>${D.fields[primary]}</span></h4><p>${escape(p.start)}</p></div><p class="nr-ai-use"><b>AI 활용</b> ${escape(p.ai)}</p></div></div>
- <h3 class="nr-process-heading">프로젝트 미리보기</h3><ol class="nr-steps" aria-label="프로젝트 구체화 예시">${p.steps.map((s,i)=>`<li><b>${i+1}</b><div><h4>${escape(s.title)}</h4><p>${escape(s.desc)}</p></div></li>`).join('')}</ol>
+ <h3 class="nr-process-heading">프로젝트 과정</h3><ol class="nr-steps" aria-label="프로젝트 구체화 예시">${p.steps.map((s,i)=>`<li><b>${i+1}</b><div><h4>${escape(s.title)}</h4><p>${escape(s.desc)}</p></div></li>`).join('')}</ol>
  <h3 class="nr-related-heading">다른 분야와의 연결</h3><div class="nr-roles">${others.map(f=>`<div class="nr-role"><span aria-hidden="true">${icons18[f]}</span><div><h4>${D.fields[f]}</h4><p>${escape(p.roles[f])}</p></div></div>`).join('')}</div>
  </div>`;
 }
